@@ -45,7 +45,8 @@ export class BackendStack extends cdk.Stack {
 					authorizationCodeGrant: true,
 				},
 				//change this with UI deployments
-				callbackUrls: ['http://localhost:5173/'],
+				callbackUrls: ['http://localhost:5173/login/oauth2/code/cognito/'],
+				logoutUrls: ['http://localhost:5173/'],
 			},
 		});
 		this.clientId = appClient.userPoolClientId;
